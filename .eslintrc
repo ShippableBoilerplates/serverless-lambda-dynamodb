@@ -1,0 +1,9 @@
+{
+    "extends": "@monolambda/eslint-config",
+    "rules": {
+        "no-console": "warn"
+    },
+    "env": {
+        "node": true
+    }
+}
