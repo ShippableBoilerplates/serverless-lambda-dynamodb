@@ -1,12 +1,12 @@
 {
-  "name": "serverless-lambda-dynamodb",
-  "description": "Serverless API Example for Client-Side SPAs",
+  "name": "serverless-backend",
+  "description": "ShippableBoilerplates Serverless Back-End",
   "version": "1.0.0",
   "author": "levsthings",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ShippableBoilerplates/serverless-lambda-dynamodb"
+    "url": "https://github.com/ShippableBoilerplates/serverless-backend"
   },
   "scripts": {
     "lint": "eslint --fix ./src/ --color"
