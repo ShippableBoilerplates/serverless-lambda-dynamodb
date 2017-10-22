@@ -16,7 +16,7 @@ exports.handler = (event, context, callback) => {
         if (err) {
             console.error('Scan error: ', err)
             callback(null, clientResponse(400, {
-                ErrorAt: 'Scan Operation'
+                error: 'Error scanning DB.'
             }))
         } else {
             const queryParams = {
@@ -30,7 +30,7 @@ exports.handler = (event, context, callback) => {
                 if (err || data.Items.length === 0) {
                     console.error('Query error: ', err)
                     callback(null, clientResponse(400, {
-                        ErrorAt: `Query Operation: ${queryParams.ExpressionAttributeValues}`
+                        error: 'Error retrieving item.'
                     }))
                 } else {
                     console.info('Sending data: ', data.Items[0])
