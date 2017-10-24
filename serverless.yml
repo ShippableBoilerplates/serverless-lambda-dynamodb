@@ -3,6 +3,16 @@ provider:
     name: aws
     runtime: nodejs6.10
     region: us-east-2
+    apiKeys:
+        - publicKey
+    usagePlan:
+        quota:
+            limit: 100
+            period: DAY
+        throttle:
+            rateLimit: 1
+            burstLimit: 1
+        usagePlanName: Basic
     iamRoleStatements:
         -
             Effect: Allow
@@ -26,4 +36,5 @@ functions:
                 http:
                     path: random-fact
                     method: GET
+                    private: true
                     cors: true
