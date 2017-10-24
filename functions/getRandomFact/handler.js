@@ -1,11 +1,7 @@
 'use strict'
-const AWS = require('aws-sdk')
 const {randomizer} = require('../utils/randomizer')
 const {clientResponse} = require('../utils/clientResponse')
-
-const docClient = new AWS.DynamoDB.DocumentClient({
-    region: 'us-east-2', apiVersion: '2012-08-10'
-})
+const {docClient} = require('../utils/docClient')
 
 exports.handler = (event, context, callback) => {
     const scanParams = {
