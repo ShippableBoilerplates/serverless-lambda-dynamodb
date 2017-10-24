@@ -12,6 +12,7 @@
     "lint": "eslint --fix ./src/ --color",
     "deploy": "sls deploy --aws-profile serverless-framework",
     "logs": "sls logs --aws-profile serverless-framework",
+    "status": "sls info --aws-profile serverless-framework",
     "remove": "sls remove --aws-profile serverless-framework"
   },
   "lint-staged": {
