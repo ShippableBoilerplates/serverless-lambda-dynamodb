@@ -10,8 +10,9 @@
   },
   "scripts": {
     "lint": "eslint --fix ./src/ --color",
-    "deploy": "sls deploy --aws-profile lev-mainframe",
-    "logs": "sls logs --aws-profile lev-mainframe"
+    "deploy": "sls deploy --aws-profile serverless-framework",
+    "logs": "sls logs --aws-profile serverless-framework",
+    "remove": "sls remove --aws-profile serverless-framework"
   },
   "lint-staged": {
     "*{.js,jsx}": [
