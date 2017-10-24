@@ -2,6 +2,7 @@ service: sb-serverless-backend
 provider:
     name: aws
     runtime: nodejs6.10
+    stage: production
     region: us-east-2
     apiKeys:
         - publicKey
