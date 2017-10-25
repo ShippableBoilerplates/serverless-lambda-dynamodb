@@ -39,3 +39,16 @@ functions:
                     method: GET
                     private: true
                     cors: true
+custom:
+    domain: chuck.boilerplate.space
+# BasePathMapping works only if you have a custom domain set within API Gateway
+resources:
+    Resources:
+        BasePathMapping:
+            Type: AWS::ApiGateway::BasePathMapping
+            Properties:
+                BasePath: ''
+                DomainName: ${self:custom.domain}
+                RestApiId:
+                    Ref: ApiGatewayRestApi
+                Stage: ${self:provider.stage}
