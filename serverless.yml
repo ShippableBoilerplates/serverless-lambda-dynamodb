@@ -41,7 +41,7 @@ functions:
                     cors: true
 custom:
     domain: chuck.boilerplate.space
-# BasePathMapping works only if you have a custom domain set within API Gateway
+# BasePathMapping works only if you have a custom domain set within API Gateway already.
 resources:
     Resources:
         BasePathMapping:
