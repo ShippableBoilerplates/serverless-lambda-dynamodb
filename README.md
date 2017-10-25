@@ -7,7 +7,7 @@
 
 This is a serverless back-end example, it uses Serverless Framework as a deployment medium. It powers the Chuck Norris jokes that are used in the client-side boilerplates in this organization, namely: [react-spa-clientside] and [react-spa-clientside-cdn].
 
-**This repository is not intended to be a boilerplate because it has some manual steps invoveld, so it's just an example as of now.**
+**This repository is not intended to be a boilerplate because it has some manual steps involved, so it's just an example as of now.**
 
 ## The Stack
 
