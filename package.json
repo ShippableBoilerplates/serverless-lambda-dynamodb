@@ -6,8 +6,7 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url":
-            "https://github.com/ShippableBoilerplates/serverless-lambda-dynamodb"
+        "url": "https://github.com/ShippableBoilerplates/serverless-lambda-dynamodb"
     },
     "scripts": {
         "precommit": "lint-staged",
@@ -18,11 +17,16 @@
         "remove": "sls remove --aws-profile serverless-framework"
     },
     "lint-staged": {
-        "*{.js,jsx}": ["yarn lint", "git add"]
+        "*{.js,jsx}": [
+            "yarn lint",
+            "git add"
+        ]
     },
     "devDependencies": {
         "@monolambda/eslint-config": "^1.5.0",
-        "eslint": "^4.7.0"
+        "eslint": "^4.7.0",
+        "husky": "^0.14.3",
+        "lint-staged": "^4.3.0"
     },
     "dependencies": {}
 }
