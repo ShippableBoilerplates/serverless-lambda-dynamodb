@@ -1,29 +1,28 @@
 {
-  "name": "serverless-lambda-dynamodb",
-  "description": "Serverless API Example for Client-Side SPAs",
-  "version": "1.0.0",
-  "author": "levsthings",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ShippableBoilerplates/serverless-lambda-dynamodb"
-  },
-  "scripts": {
-    "lint": "eslint --fix ./src/ --color",
-    "deploy": "sls deploy --aws-profile serverless-framework",
-    "logs": "sls logs --aws-profile serverless-framework",
-    "status": "sls info --aws-profile serverless-framework",
-    "remove": "sls remove --aws-profile serverless-framework"
-  },
-  "lint-staged": {
-    "*{.js,jsx}": [
-      "yarn lint",
-      "git add"
-    ]
-  },
-  "devDependencies": {
-    "@monolambda/eslint-config": "^1.5.0",
-    "eslint": "^4.7.0"
-  },
-  "dependencies": {}
+    "name": "serverless-lambda-dynamodb",
+    "description": "Serverless API Example for Client-Side SPAs",
+    "version": "1.0.0",
+    "author": "levsthings",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url":
+            "https://github.com/ShippableBoilerplates/serverless-lambda-dynamodb"
+    },
+    "scripts": {
+        "precommit": "lint-staged",
+        "lint": "eslint --fix ./src/ --color",
+        "deploy": "sls deploy --aws-profile serverless-framework",
+        "logs": "sls logs --aws-profile serverless-framework",
+        "status": "sls info --aws-profile serverless-framework",
+        "remove": "sls remove --aws-profile serverless-framework"
+    },
+    "lint-staged": {
+        "*{.js,jsx}": ["yarn lint", "git add"]
+    },
+    "devDependencies": {
+        "@monolambda/eslint-config": "^1.5.0",
+        "eslint": "^4.7.0"
+    },
+    "dependencies": {}
 }
