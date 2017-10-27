@@ -11,9 +11,12 @@ exports.handler = (event, context, callback) => {
     docClient.scan(scanParams, (err, scan) => {
         if (err) {
             console.error('Scan error: ', err)
-            callback(null, clientResponse(400, {
-                error: 'Error scanning DB.'
-            }))
+            callback(
+                null,
+                clientResponse(400, {
+                    error: 'Error scanning DB.'
+                })
+            )
         } else {
             const queryParams = {
                 TableName: 'ChuckDB',
@@ -25,14 +28,20 @@ exports.handler = (event, context, callback) => {
             docClient.query(queryParams, (err, data) => {
                 if (err || data.Items.length === 0) {
                     console.error('Query error: ', err)
-                    callback(null, clientResponse(400, {
-                        error: 'Error retrieving item.'
-                    }))
+                    callback(
+                        null,
+                        clientResponse(400, {
+                            error: 'Error retrieving item.'
+                        })
+                    )
                 } else {
                     console.info('Sending data: ', data.Items[0])
-                    callback(null, clientResponse(200, {
-                        joke: data.Items[0]
-                    }))
+                    callback(
+                        null,
+                        clientResponse(200, {
+                            joke: data.Items[0]
+                        })
+                    )
                 }
             })
         }
